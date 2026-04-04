@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Setup — 3-Slide Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Tokens ───────────────────────────────────────────── */
+    :root {
+      --bg:       #09090b;
+      --surface:  #18181b;
+      --border:   #3f3f46;
+      --accent:   #8b5cf6;
+      --accent-lt:#a78bfa;
+      --accent-dk:#7c3aed;
+      --text:     #fafafa;
+      --muted:    #a1a1aa;
+      --dim:      #71717a;
+      --green:    #4ade80;
+      --red:      #f87171;
+
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-sans:    'Inter', system-ui, sans-serif;
+      --font-mono:    'Fira Code', monospace;
+    }
+
+    /* ── Reset ────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;               /* one slide fills the viewport */
+    }
+
+    /* ── Deck ─────────────────────────────────────────────── */
+    .deck {
+      display: flex;
+      width: 300vw;                   /* 3 slides side by side */
+      height: 100vh;
+      transition: transform 0.55s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    /* ── Slide base ───────────────────────────────────────── */
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      padding: clamp(2rem, 6vw, 5rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Dot-grid backdrop (same as portfolio hero) */
+    .slide::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(63,63,70,0.55) 1px, transparent 1px);
+      background-size: 30px 30px;
+      mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 30%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .slide-inner {
+      position: relative;
+      width: min(860px, 100%);
+    }
+
+    /* ── Slide number badge ───────────────────────────────── */
+    .slide-num {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .slide-num::after {
+      content: '';
+      flex: 0 0 48px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+
+    /* ── Headings ─────────────────────────────────────────── */
+    .slide-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.0;
+      margin-bottom: 2rem;
+    }
+
+    /* ── Content blocks ───────────────────────────────────── */
+    .slide-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* ── SLIDE 1 — Problem ────────────────────────────────── */
+    .slide-1 .slide-title {
+      background: linear-gradient(135deg, var(--text) 40%, var(--red));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .pain-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      list-style: none;
+    }
+    .pain-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .pain-list li .icon {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: rgba(248,113,113,0.1);
+      border: 1px solid rgba(248,113,113,0.25);
+      display: grid;
+      place-items: center;
+      font-size: 0.75rem;
+      margin-top: 1px;
+    }
+
+    .quote-block {
+      margin-top: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      border-left: 3px solid var(--red);
+      background: rgba(248,113,113,0.05);
+      border-radius: 0 10px 10px 0;
+    }
+    .quote-block p {
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      color: var(--text);
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .quote-block cite {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--dim);
+      font-style: normal;
+      font-family: var(--font-mono);
+    }
+
+    /* ── SLIDE 2 — Method ─────────────────────────────────── */
+    .slide-2 .slide-title {
+      background: linear-gradient(135deg, var(--text) 40%, var(--accent-lt));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .method-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .method-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-dk), var(--accent-lt));
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .method-card:hover::after { opacity: 1; }
+
+    .method-card-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .method-card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+    .method-card-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .method-principle {
+      margin-top: 0.5rem;
+      padding: 1rem 1.4rem;
+      background: rgba(139,92,246,0.07);
+      border: 1px solid rgba(139,92,246,0.2);
+      border-radius: 10px;
+      font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+      color: var(--accent-lt);
+      line-height: 1.5;
+    }
+    .method-principle strong { color: var(--text); }
+
+    /* ── SLIDE 3 — Results ────────────────────────────────── */
+    .slide-3 .slide-title {
+      background: linear-gradient(135deg, var(--text) 40%, var(--green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .results-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .stat-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+    }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: var(--green);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 3.5rem;
+    }
+    .stat-text strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.15rem;
+    }
+    .stat-text span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .takeaway-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .takeaway {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.9rem 1.2rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .takeaway strong { color: var(--text); }
+
+    .closing {
+      margin-top: 0.5rem;
+      padding: 1rem 1.4rem;
+      background: rgba(74,222,128,0.06);
+      border: 1px solid rgba(74,222,128,0.2);
+      border-radius: 10px;
+      font-size: 0.9rem;
+      color: var(--green);
+      line-height: 1.5;
+      grid-column: 1 / -1;
+    }
+    .closing strong { color: var(--text); }
+
+    /* ── Navigation ───────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      z-index: 10;
+    }
+
+    .nav-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: border-color 0.2s, background 0.2s;
+      font-size: 1rem;
+    }
+    .nav-btn:hover:not(:disabled) {
+      border-color: var(--accent);
+      background: rgba(139,92,246,0.1);
+    }
+    .nav-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+
+    .nav-dots {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: background 0.25s, transform 0.25s;
+      cursor: pointer;
+    }
+    .dot.active {
+      background: var(--accent);
+      transform: scale(1.4);
+    }
+
+    /* ── Keyboard hint ────────────────────────────────────── */
+    .key-hint {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--dim);
+      letter-spacing: 1px;
+    }
+
+    /* ── Logo watermark ───────────────────────────────────── */
+    .watermark {
+      position: fixed;
+      top: 1.5rem;
+      left: 1.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--dim);
+    }
+    .watermark span { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <div class="watermark">esther<span>.</span>dev</div>
+  <div class="key-hint">← → arrow keys</div>
+
+  <div class="deck" id="deck">
+
+    <!-- ══════════════════════════════════════════
+         SLIDE 1 — PROBLEM
+    ══════════════════════════════════════════ -->
+    <div class="slide slide-1">
+      <div class="slide-inner">
+        <div class="slide-num">01 / Problem</div>
+        <h1 class="slide-title">No setup,<br/>no signal.</h1>
+        <div class="slide-body">
+          <ul class="pain-list">
+            <li>
+              <span class="icon">✗</span>
+              Notepad as an editor — no syntax highlighting, no formatting, no feedback
+            </li>
+            <li>
+              <span class="icon">✗</span>
+              Manual browser refreshes after every single save
+            </li>
+            <li>
+              <span class="icon">✗</span>
+              No version control visibility — git felt abstract and forgettable
+            </li>
+            <li>
+              <span class="icon">✗</span>
+              When something broke, no way to isolate why — just trial and error
+            </li>
+          </ul>
+          <div class="quote-block">
+            <p>"I spent an hour staring at a CSS bug. A better-equipped developer fixed it in 25 seconds. The difference wasn't skill. It was tools."</p>
+            <cite>— The moment it became real</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         SLIDE 2 — METHOD
+    ══════════════════════════════════════════ -->
+    <div class="slide slide-2">
+      <div class="slide-inner">
+        <div class="slide-num">02 / Method</div>
+        <h1 class="slide-title">One pain<br/>at a time.</h1>
+        <div class="slide-body">
+          <div class="method-grid">
+            <div class="method-card">
+              <div class="method-card-label">Editor</div>
+              <div class="method-card-title">VS Code + Live Server</div>
+              <div class="method-card-desc">Installed when manual refreshing became unbearable. One button — instant browser preview on every save.</div>
+            </div>
+            <div class="method-card">
+              <div class="method-card-label">Formatting</div>
+              <div class="method-card-title">Prettier</div>
+              <div class="method-card-desc">Added when my own code started confusing me. Enforces consistency automatically — no decisions needed.</div>
+            </div>
+            <div class="method-card">
+              <div class="method-card-label">Version control</div>
+              <div class="method-card-title">GitLens</div>
+              <div class="method-card-desc">Made git history visible inline. Turned an abstract habit into a visible story of the work.</div>
+            </div>
+            <div class="method-card">
+              <div class="method-card-label">AI pair programming</div>
+              <div class="method-card-title">Claude Code</div>
+              <div class="method-card-desc">Reads your actual files, edits code directly, explains what it changed. Used when hitting a real wall.</div>
+            </div>
+          </div>
+          <div class="method-principle">
+            <strong>Principle:</strong> Don't install for completeness — install for pain. Each tool earns its place by solving a specific friction you've already felt.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         SLIDE 3 — RESULTS
+    ══════════════════════════════════════════ -->
+    <div class="slide slide-3">
+      <div class="slide-inner">
+        <div class="slide-num">03 / Results</div>
+        <h1 class="slide-title">Shipped<br/>in week one.</h1>
+        <div class="slide-body">
+          <div class="results-layout">
+            <div class="stat-stack">
+              <div class="stat-card">
+                <div class="stat-num">1hr</div>
+                <div class="stat-text">
+                  <strong>→ 25 seconds</strong>
+                  <span>CSS bug resolution time, before vs. after Claude Code</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">4</div>
+                <div class="stat-text">
+                  <strong>Tools installed</strong>
+                  <span>VS Code, Live Server, Prettier, GitLens + Claude Code in terminal</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">1</div>
+                <div class="stat-text">
+                  <strong>Live site deployed</strong>
+                  <span>Portfolio site on Netlify — HTML, CSS, JS, working contact form</span>
+                </div>
+              </div>
+            </div>
+            <div class="takeaway-stack">
+              <div class="takeaway">
+                <strong>The fix was instant.</strong> The lesson was durable. Claude Code didn't skip the understanding — it got me back to it faster.
+              </div>
+              <div class="takeaway">
+                <strong>Setup is learning.</strong> Every tool you add forces you to ask what you're actually trying to do. That question is worth more than the install time.
+              </div>
+              <div class="takeaway">
+                <strong>Workflow now:</strong> Open project → start Claude Code → Live Server preview → commit via GitLens. Nothing in the environment slows me down.
+              </div>
+            </div>
+            <div class="closing">
+              <strong>Week one outcome:</strong> A workflow that works, a site that's live, and a clearer sense of what building actually feels like — not just typing.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /deck -->
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Slide navigation">
+    <button class="nav-btn" id="prev" aria-label="Previous slide" disabled>&#8592;</button>
+    <div class="nav-dots" id="dots">
+      <div class="dot active" data-slide="0"></div>
+      <div class="dot" data-slide="1"></div>
+      <div class="dot" data-slide="2"></div>
+    </div>
+    <button class="nav-btn" id="next" aria-label="Next slide">&#8594;</button>
+  </nav>
+
+  <script>
+    const deck    = document.getElementById('deck');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const dots    = document.querySelectorAll('.dot');
+    const total   = 3;
+    let current   = 0;
+
+    function goTo(index) {
+      current = Math.max(0, Math.min(total - 1, index));
+      deck.style.transform = `translateX(-${current * 100}vw)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === total - 1;
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+    dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.slide)));
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goTo(current + 1);
+      if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   goTo(current - 1);
+    });
+  </script>
+
+</body>
+</html>

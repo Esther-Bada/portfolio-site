@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esther | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <header class="nav-header">
+    <nav class="nav container">
+      <a href="#hero" class="nav-logo">esther<span class="accent">.</span>dev</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact" class="btn btn-sm">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="hero">
+      <div class="hero-dots" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-badge fade-up">
+          <span class="badge-dot"></span>
+          Available for opportunities
+        </div>
+        <p class="hero-greeting fade-up delay-1">Hi, I'm</p>
+        <h1 class="hero-name fade-up delay-2">Esther</h1>
+        <p class="hero-tagline fade-up delay-3">
+          Junior developer building things on the web —<br />
+          one commit at a time.
+        </p>
+        <div class="hero-cta fade-up delay-4">
+          <a href="#projects" class="btn">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero-scroll fade-up delay-5" aria-hidden="true">
+          <span>scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="about section">
+      <div class="container">
+        <span class="section-label reveal">01 / About</span>
+        <h2 class="section-title reveal">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a developer in the early stages of my career, passionate about building clean,
+              user-friendly web experiences. I love learning in public, shipping projects,
+              and using tools like VS Code and Claude Code to supercharge my workflow.
+            </p>
+            <p>
+              When I'm not coding, you'll find me reading docs, exploring new frameworks,
+              or writing about what I've just learned.
+            </p>
+            <a href="#contact" class="btn mt-md">Let's Talk</a>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Projects shipped</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Blog post published</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">&#8734;</span>
+                <span class="stat-label">Things to learn</span>
+              </div>
+            </div>
+          </div>
+          <div class="skills reveal delay-1">
+            <h3>Skills &amp; Tools</h3>
+            <ul class="skill-list">
+              <li><span class="skill-tag">HTML</span></li>
+              <li><span class="skill-tag">CSS</span></li>
+              <li><span class="skill-tag">JavaScript</span></li>
+              <li><span class="skill-tag">Git &amp; GitHub</span></li>
+              <li><span class="skill-tag">VS Code</span></li>
+              <li><span class="skill-tag">Claude Code</span></li>
+              <li><span class="skill-tag">Netlify</span></li>
+              <li><span class="skill-tag">Responsive Design</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="projects section section-alt">
+      <div class="container">
+        <span class="section-label reveal">02 / Projects</span>
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-subtitle reveal">Things I've built while learning.</p>
+        <div class="card-grid">
+
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="card-icon">&#128203;</span>
+              <div class="card-links">
+                <a href="#" aria-label="GitHub repo" title="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="#" aria-label="Live demo" title="Live demo">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="card-title">AI To-Do App</h3>
+            <p class="card-desc">A task management app with AI-powered suggestions built during intro week. Uses vanilla JS and localStorage.</p>
+            <div class="card-tags">
+              <span>JavaScript</span><span>HTML</span><span>CSS</span>
+            </div>
+          </article>
+
+          <article class="card reveal delay-1">
+            <div class="card-top">
+              <span class="card-icon">&#127760;</span>
+              <div class="card-links">
+                <a href="#" aria-label="GitHub repo" title="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="#" aria-label="Live demo" title="Live demo">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="card-title">Portfolio Site</h3>
+            <p class="card-desc">This site! Built with plain HTML, CSS, and JavaScript. Deployed to Netlify with a built-in contact form.</p>
+            <div class="card-tags">
+              <span>HTML</span><span>CSS</span><span>Netlify</span>
+            </div>
+          </article>
+
+          <article class="card reveal delay-2">
+            <div class="card-top">
+              <span class="card-icon">&#128218;</span>
+              <div class="card-links">
+                <a href="#" aria-label="GitHub repo" title="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="#" aria-label="Live demo" title="Live demo">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="card-title">Reading Tracker</h3>
+            <p class="card-desc">A simple app to log books, track reading progress, and add personal notes. Uses browser localStorage.</p>
+            <div class="card-tags">
+              <span>JavaScript</span><span>localStorage</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BLOG ========== -->
+    <section id="blog" class="blog section">
+      <div class="container">
+        <span class="section-label reveal">03 / Blog</span>
+        <h2 class="section-title reveal">Blog</h2>
+        <p class="section-subtitle reveal">Writing about what I'm learning.</p>
+        <div class="card-grid card-grid--blog">
+
+          <article class="card card--blog reveal">
+            <div class="blog-meta">
+              <time datetime="2026-03-28">March 28, 2026</time>
+              <span class="blog-tag">Dev Setup</span>
+            </div>
+            <h3 class="card-title">
+              <a href="#blog-post-1">What I Didn't Expect From My First Real Dev Setup</a>
+            </h3>
+            <p class="card-desc">
+              I came into intro week thinking environment setup was a box to tick before the real learning started.
+              I was wrong. Here's what VS Code, three extensions, and Claude Code actually taught me —
+              and why the tools around the code matter as much as the code itself.
+            </p>
+            <a href="#blog-post-1" class="blog-read-more">Read article &rarr;</a>
+          </article>
+
+        </div>
+
+        <!-- Inline article -->
+        <div class="blog-divider reveal">
+          <span class="blog-divider-label">Latest Article</span>
+          <div class="blog-divider-line"></div>
+        </div>
+
+        <div id="blog-post-1" class="blog-post reveal">
+          <div class="blog-post-header">
+            <time datetime="2026-03-28">March 28, 2026</time>
+            <h2>What I Didn't Expect From My First Real Dev Setup</h2>
+            <p class="blog-post-intro">
+              I came into intro week thinking environment setup was a box to tick before the real learning started.
+              I was wrong. Here's what VS Code, three extensions, and Claude Code actually taught me —
+              and why the tools around the code matter as much as the code itself.
+            </p>
+          </div>
+          <div class="blog-post-body">
+
+            <h3>Before Any of This</h3>
+            <p>
+              My version of a "development environment" before intro week was Notepad and a browser
+              with too many Stack Overflow tabs open. I'd been dabbling with HTML for a few months —
+              copying tutorials, tweaking things, watching things break without knowing why.
+              I knew what a text editor was. I didn't know what I was missing.
+            </p>
+            <p>
+              Intro week changed that. And honestly, it wasn't the code itself that shifted the most.
+              It was the tools around the code.
+            </p>
+
+            <h3>VS Code: More Than a Fancy Notepad</h3>
+            <p>
+              I'd been told to install VS Code before the week started. I did, opened it, stared at the
+              interface for ten minutes, and thought: <em>this is just a text editor with a dark theme.</em>
+              I was wrong, but I didn't know that yet.
+            </p>
+            <p>
+              The shift happened when I installed my first extension: <strong>Live Server</strong>.
+              I clicked "Go Live" in the status bar, my browser opened automatically, and every time I saved
+              my HTML file the page refreshed by itself. It sounds trivial. It wasn't. I'd been manually
+              refreshing the browser dozens of times per session for months. That single thirty-second
+              install gave me back a meaningful slice of my working time.
+            </p>
+            <p>
+              Then came <strong>Prettier</strong>. My first reaction to auto-formatting was mild annoyance —
+              <em>why is it moving my brackets?</em> My second reaction, after looking at my own code and
+              then at formatted code side by side, was embarrassment. I'd been writing code that was
+              technically valid but visually chaotic. Prettier taught me what consistency actually looks like,
+              and it made reviewing my own work much easier.
+            </p>
+            <p>
+              <strong>GitLens</strong> came third, and it was the most conceptually useful. Seeing a tiny
+              annotation next to each line — <em>"you changed this 3 hours ago"</em> — made version control
+              feel visible and real rather than abstract. Git stopped being something I used out of obligation
+              and started being something that showed me the story of my own work.
+            </p>
+            <p>
+              By the end of the first day, VS Code felt less like a text editor and more like a workspace.
+              That distinction matters more than it sounds.
+            </p>
+
+            <h3>Claude Code: The Tool I Almost Dismissed</h3>
+            <p>
+              I'll be honest: I came into intro week skeptical about AI coding tools. My assumption
+              was that they were a crutch — something that got you answers without helping you understand
+              them. I was half right, and mostly wrong.
+            </p>
+            <p>
+              Claude Code isn't a search engine you type questions into. It runs in your terminal,
+              reads your actual files, edits your code directly, and explains what it's doing as it works.
+              The first time I watched it open my stylesheet and make an edit without me pasting in a
+              single line of code, I had to stop and watch it again.
+            </p>
+            <p>
+              The moment I knew this tool was genuinely different: I had a CSS bug I'd been staring at
+              for nearly an hour. My navbar wasn't positioning correctly. I checked the <code>z-index</code>,
+              the <code>display</code> property, the <code>flex</code> alignment — everything I thought could
+              be wrong. Nothing worked. I described the problem to Claude Code in plain English. It read my
+              stylesheet, identified that I was missing <code>position: relative</code> on the parent container —
+              the one property I hadn't checked — and fixed it. Twenty-five seconds, start to finish.
+            </p>
+            <p>
+              That wasn't the moment I stopped thinking. That was the moment I started thinking better.
+              Because afterward, I understood <em>why</em> <code>position: relative</code> matters for
+              absolutely positioned children. The fix was instant. The lesson was durable.
+            </p>
+            <p>
+              What changed my mind about AI tools in a learning context is this: the best use of Claude Code
+              isn't getting it to write code <em>for</em> you. It's using it to unblock yourself faster,
+              so you keep moving forward instead of losing hours to a single frustrating wall. You still have
+              to understand the problem. You still have to know when the output is wrong. You still make the
+              decisions. The tool just compresses the distance between "stuck" and "unstuck."
+            </p>
+
+            <h3>What the Week Actually Taught Me</h3>
+            <p>
+              I came in thinking setup was something to get through before the real learning started.
+              It turns out the setup <em>is</em> part of the learning.
+            </p>
+            <p>
+              Choosing and configuring tools forces you to ask: <em>what am I actually trying to do?</em>
+              Installing Live Server forces you to understand the relationship between a source file and
+              the browser. Setting up Git through GitLens makes you think about what a meaningful commit
+              message looks like. Watching Claude Code work in your own files forces you to read code
+              more carefully than you would on your own.
+            </p>
+            <p>
+              Every tool I added asked something of me in return. Not just time — attention.
+            </p>
+
+            <h3>My Workflow Now</h3>
+            <ol>
+              <li>Open the project folder in VS Code</li>
+              <li>Start Claude Code in the integrated terminal</li>
+              <li>Use Live Server to preview changes in real time</li>
+              <li>Commit with Git using VS Code's source control panel</li>
+            </ol>
+            <p>
+              That's it. Simple, connected, and fast enough that nothing in the environment slows me
+              down before I've even written a line.
+            </p>
+
+            <h3>If You're Just Starting Out</h3>
+            <p>
+              Don't try to configure everything at once. Install VS Code. Install Live Server. Open your
+              first project. Let that be enough for day one.
+            </p>
+            <p>
+              Add tools as you feel a specific pain — not because a tutorial told you to. The extensions
+              that stuck for me are the ones I installed because something was annoying me. That's the
+              right signal.
+            </p>
+            <p>
+              And don't be afraid of AI coding tools. Be <em>skeptical</em> of them — which is different.
+              Use them as a collaborator, not a replacement. Ask it to explain what it did. Read the diff.
+              Push back when something looks wrong. The goal is still to understand what you're building.
+              Good tools just help you get there with less friction.
+            </p>
+            <p>
+              I'm still early in all of this. But I'm early with a setup that actually works, a workflow
+              I understand, and a clearer sense of what building feels like — not just typing. For week one,
+              that's more than I expected.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="contact section section-alt">
+      <div class="container contact-inner">
+        <div class="contact-text reveal">
+          <span class="section-label">04 / Contact</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p>
+            I'm always open to chatting about projects, opportunities, or just developer life.
+            Fill in the form and I'll get back to you.
+          </p>
+          <ul class="contact-links">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <a href="https://github.com" target="_blank" rel="noopener">github.com/esther</a>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin.com/in/esther</a>
+            </li>
+          </ul>
+        </div>
+
+<!-- Netlify-compatible contact form -->
+<form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  class="contact-form reveal delay-1"
+  id="contact-form"
+>
+  <input type="hidden" name="form-name" value="contact" />
+
+  <p class="hidden" aria-hidden="true">
+    <label>Don't fill this out: <input name="bot-field" /></label>
+  </p>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Say hello..." required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-full">Send Message</button>
+</form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="nav-logo">esther<span class="accent">.</span>dev</a>
+      <div class="footer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> Esther. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
