@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Esther Bada</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <header class="nav-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">Esther<span class="accent"></span>B.</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="contact.html" class="btn btn-sm">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== BLOG ========== -->
+    <section id="blog" class="blog section">
+      <div class="container">
+        <span class="section-label reveal">03 / Blog</span>
+        <h2 class="section-title reveal">Blog</h2>
+        <p class="section-subtitle reveal">Writing about what I'm learning.</p>
+        <div class="card-grid card-grid--blog">
+
+          <article class="card card--blog reveal">
+            <div class="blog-meta">
+              <time datetime="2026-04-03">April 3, 2026</time>
+              <span class="blog-tag">Building in Public</span>
+            </div>
+            <h3 class="card-title">
+              <a href="#blog-post-1">What I Didn't Expect From Building My First Real Website With AI</a>
+            </h3>
+            <p class="card-desc">
+              I didn't come into this trying to become a software developer. Here's what actually
+              happened when I built and deployed my first real project — the tools I used, the part
+              that broke me, and what shifted in how I think about building.
+            </p>
+            <a href="#blog-post-1" class="blog-read-more">Read article &rarr;</a>
+          </article>
+
+        </div>
+
+        <!-- Inline article -->
+        <div class="blog-divider reveal">
+          <span class="blog-divider-label">Latest Article</span>
+          <div class="blog-divider-line"></div>
+        </div>
+
+        <div id="blog-post-1" class="blog-post reveal">
+          <div class="blog-post-header">
+            <div class="blog-post-meta">
+              <span class="blog-tag">Building in Public</span>
+              <time datetime="2026-04-03">April 3, 2026</time>
+              <span class="blog-post-read-time">5 min read</span>
+            </div>
+            <h2>What I Didn't Expect From Building My First Real Website With AI</h2>
+            <div class="blog-post-intro">
+              <p>I didn't come into this trying to become a software developer.</p>
+              <p>
+                My background is in education — understanding how people learn, how systems fail them,
+                and how those gaps can be closed. So when I started building with AI tools, it wasn't
+                about "learning to code" in the traditional sense. It was about figuring out how to
+                actually build something real, from scratch, and get it live.
+              </p>
+              <p>
+                This project — my portfolio website — is the first time I've taken something from idea
+                to a working, deployed system.
+              </p>
+            </div>
+          </div>
+
+          <div class="blog-post-body">
+
+            <h3>The Stack I Used</h3>
+            <p>To get the site live, I used a simple but complete toolchain:</p>
+            <ul>
+              <li>Claude Code — for building, editing, and debugging directly inside my project</li>
+              <li>VS Code — as my development environment</li>
+              <li>Live Server — for real-time preview while building</li>
+              <li>GitHub — for version control and tracking my work</li>
+              <li>Netlify — for deployment and hosting</li>
+              <li>Netlify Forms — to handle contact form submissions without a backend</li>
+            </ul>
+            <p>None of these tools on their own are complex. What matters is how they connect.</p>
+
+            <h3>Why I Chose These Tools</h3>
+            <p>
+              I chose Netlify because it removes the need for managing servers. I didn't need to think
+              about infrastructure — I just needed a way to get my site live quickly and reliably.
+            </p>
+            <p>
+              Instead of setting up a full database, I used Netlify Forms. It handles form submissions
+              automatically, which meant I didn't have to build a backend just to receive messages.
+            </p>
+            <p>
+              Claude Code became the most important tool in the process. It allowed me to describe
+              problems in plain language, see how they connected to my actual files, and fix issues
+              without getting stuck for hours.
+            </p>
+
+            <h3>What It Cost Me</h3>
+            <p>One thing I paid attention to while building was cost.</p>
+            <ul>
+              <li>VS Code — free</li>
+              <li>Live Server — free</li>
+              <li>GitHub — free (for public repositories)</li>
+              <li>Netlify — free tier (hosting and forms)</li>
+              <li>Claude — paid plan (but optional depending on usage)</li>
+            </ul>
+            <p>
+              It's possible to build and deploy a working website with almost no upfront cost.
+              That changes how accessible building becomes.
+            </p>
+
+            <h3>The Hard Part: Deployment</h3>
+            <p>The most challenging part of this project wasn't writing code — it was deployment.</p>
+            <p>
+              I ran into repeated issues trying to connect my GitHub repository to Netlify. Even after
+              configuring everything correctly, the deployed site kept returning a 404 error. The manual
+              deployment worked, but the Git-integrated version didn't.
+            </p>
+            <p>
+              That experience taught me something important: building the site is only half the work.
+              Getting it live, and understanding how the system behaves in a real environment, is where
+              things become real.
+            </p>
+
+            <h3>What Changed For Me</h3>
+            <p>
+              Before this, I saw coding as something that required years of learning before you could
+              build anything meaningful.
+            </p>
+            <p>Now, I see it differently.</p>
+            <p>
+              I can build real systems. I can deploy them. I can debug them. And I can do that without
+              coming from a traditional software engineering background.
+            </p>
+            <p>
+              What matters is not just knowing syntax — it's knowing how to think, how to structure
+              problems, and how to use the right tools effectively.
+            </p>
+
+            <h3>Where This Goes Next</h3>
+            <p>This is just the beginning.</p>
+            <p>
+              I'm not trying to become a conventional developer. I'm exploring what it means to build
+              tools that sit at the intersection of education, technology, and human experience.
+            </p>
+            <p>And now, I know I can actually build them.</p>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="nav-logo">Esther<span class="accent"></span>B.</a>
+      <div class="footer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> Esther. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

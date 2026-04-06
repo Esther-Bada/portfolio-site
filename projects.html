@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Esther Bada</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <header class="nav-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">Esther<span class="accent"></span>B.</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="btn btn-sm">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="projects section section-alt">
+      <div class="container">
+        <span class="section-label reveal">02 / Projects</span>
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-subtitle reveal">Real things I’ve built while learning and exploring.</p>
+
+        <div class="card-grid">
+
+          <!-- PROJECT 1 -->
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="card-icon">&#128203;</span>
+            </div>
+            <h3 class="card-title">AI To-Do App</h3>
+            <p class="card-desc">
+              A task management app with AI-powered suggestions built during intro week.
+              Uses vanilla JavaScript and localStorage.
+            </p>
+            <div class="card-tags">
+              <span>JavaScript</span><span>HTML</span><span>CSS</span>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 (UPDATED - IMPORTANT ONE) -->
+          <article class="card reveal delay-1">
+            <div class="card-top">
+              <span class="card-icon">&#127760;</span>
+            </div>
+
+            <h3 class="card-title">Portfolio Website (AI-Assisted Build)</h3>
+
+            <p class="card-desc">
+              I built and deployed a fully functional personal portfolio website using AI tools,
+              without a traditional software engineering background.
+            </p>
+
+            <ul class="card-desc">
+              <li><strong>Tools:</strong> Claude Code, VS Code, Netlify, GitHub</li>
+              <li><strong>Key decision:</strong> Used Netlify Forms instead of building a backend</li>
+              <li><strong>Challenge:</strong> Debugging Netlify deployment issues (404 errors with GitHub integration)</li>
+              <li><strong>Outcome:</strong> Successfully deployed a live website with working navigation and contact form</li>
+            </ul>
+
+            <div class="card-tags">
+              <span>AI</span><span>Netlify</span><span>GitHub</span>
+            </div>
+
+            <a href="https://esther-portfolio12.netlify.app/" target="_blank" class="btn btn-sm mt-md">
+              View Live Site
+            </a>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="card reveal delay-2">
+            <div class="card-top">
+              <span class="card-icon">&#128218;</span>
+            </div>
+            <h3 class="card-title">Reading Tracker</h3>
+            <p class="card-desc">
+              A simple app to log books, track reading progress, and add personal notes using localStorage.
+            </p>
+            <div class="card-tags">
+              <span>JavaScript</span><span>localStorage</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="nav-logo">Esther<span class="accent"></span>B.</a>
+      <div class="footer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> Esther. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
