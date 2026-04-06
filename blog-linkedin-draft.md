@@ -1,60 +1,77 @@
 # LinkedIn Draft
-## "What I Didn't Expect From My First Real Dev Setup"
-*Structure: Hook → Problem → What I built → How I built it → Result*
-*~350 words | Copy everything between the lines and paste into LinkedIn*
+
+## What I Didn’t Expect From My First Real Workflow
+
+I didn’t come from tech.
+
+My background is in early childhood education — understanding how people learn, what makes knowledge stick, and why some get left behind before they’ve even had a fair chance.
+
+So when I started building, I wasn’t trying to become a developer.
+
+I was trying to understand the tools.
 
 ---
 
-I spent an hour staring at a CSS bug last week.
+At first, my “setup” was very basic.
 
-A senior dev fixed it in 25 seconds.
+I wrote code, refreshed the browser manually, and tried different fixes until something worked.
 
-The difference wasn't skill. It was tools.
+Sometimes it worked.  
+Most times, I didn’t really understand *why*.
 
----
-
-**The problem:**
-
-Before intro week, my "development environment" was Notepad and too many Stack Overflow tabs.
-
-I was writing code that worked but didn't understand why. I was manually refreshing the browser after every change. I had no visibility into my git history. And when something broke, I was completely on my own.
-
-I didn't know what a real dev setup looked like — or how much time I was losing without one.
+It was slow… and honestly frustrating.
 
 ---
 
-**What I built:**
+Then I changed how I approached it.
 
-A complete local development environment during my first week as a developer.
-
-VS Code as my editor, Live Server for instant browser previews, Prettier for consistent formatting, GitLens for visible version control — and Claude Code running in the terminal alongside all of it.
-
-I also shipped my first project that week: a portfolio site, deployed live on Netlify, with a working contact form. No backend. No server. Just HTML, CSS, JavaScript, and the right tools.
+Not by learning everything at once —  
+but by fixing one problem at a time.
 
 ---
 
-**How I built it:**
+I set up:
 
-One pain at a time.
+• VS Code  
+• Live Server  
+• Git & GitHub  
+• Claude Code  
+• Netlify  
 
-I didn't install everything on day one. I installed Live Server when the manual refreshing got annoying. I installed Prettier when my own code started confusing me. I added Claude Code when I hit my first real wall.
+And used it to build and deploy my first real project — my portfolio site.
 
-That CSS bug I mentioned — navbar not positioning correctly, an hour of checking the wrong things. I described it in plain English to Claude Code. It read my stylesheet, found the missing `position: relative`, and fixed it. Twenty-five seconds.
-
-More importantly: I understood *why* it worked afterward. The fix was instant. The lesson was durable.
-
-That's the right way to use AI tools when you're learning. Not to skip the understanding — to get back to it faster.
-
----
-
-**The result:**
-
-A workflow that actually works. A site that's live. And a clearer sense of what "building" feels like — not just typing.
-
-I'm still early. But I'm early with momentum, and that's more than I expected from week one.
+Live on Netlify.  
+With a working contact form.  
+No backend.
 
 ---
 
-*I'm building in public and writing about what I'm learning. Full article on my portfolio site — link in bio. If you're on a similar path, let's connect.*
+What surprised me wasn’t just the tools.
 
-#WebDevelopment #LearningToCode #VSCode #ClaudeCode #DeveloperLife #BuildingInPublic #TechCareer
+It was how much easier everything became when they started working *together*.
+
+I wasn’t guessing as much.  
+I wasn’t stuck for as long.  
+I was actually understanding what I was doing.
+
+---
+
+Now I have:
+
+• a working setup  
+• a live website  
+• and a clearer understanding of how to build  
+
+---
+
+I’m not a developer.
+
+But I’m building real things — and I’m starting to understand what that really means.
+
+---
+
+I’m documenting everything I’m learning as I go.
+
+---
+
+#BuildingInPublic #AItools #LearningJourney #CloudComputing #TechTransition #ClaudeCode
