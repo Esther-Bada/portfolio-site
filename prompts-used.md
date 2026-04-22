@@ -40,3 +40,65 @@ Create a 3-slide presentation:
 Slide 1: Problem
 Slide 2: Method
 Slide 3: Results
+
+## Prompt 10 
+Refactor my current single-page portfolio into a multi-page site step by step.
+
+For this first step, update index.html so it becomes only the Home page.
+Keep:
+- the head section
+- header/navigation
+- hero section
+- footer
+- script include
+
+Remove:
+- about section
+- projects section
+- blog section
+- contact section
+
+Do not touch style.css or app.js yet.
+Also update the navigation links in index.html to point to:
+index.html, about.html, projects.html, blog.html, contact.html
+
+## Prompt 11
+Create about.html from the About section that was previously in my single-page portfolio.
+
+Requirements:
+- keep the same overall styling by linking style.css
+- keep the same header/navigation
+- keep the same footer
+- include only the About content as the main page content
+- update navigation links to:
+  index.html, about.html, projects.html, blog.html, contact.html
+- mark About as the current page if appropriate
+- keep app.js linked at the bottom
+Do not change style.css or app.js yet.
+
+
+## Prompt 12
+Create projects.html from the Projects section that was previously in my single-page portfolio.
+
+Requirements:
+- keep the same styling by linking style.css
+- keep the same header/navigation
+- keep the same footer
+- include only the Projects content as the main page content
+- update navigation links to:
+  index.html, about.html, projects.html, blog.html, contact.html
+- keep app.js linked at the bottom
+Do not change style.css or app.js yet.
+
+## Prompt 13
+Create blog.html from the Blog section that was previously in my single-page portfolio.
+
+Requirements:
+- keep the same styling by linking style.css
+- keep the same header/navigation
+- keep the same footer
+- include the full blog content as the main page content
+- update navigation links to:
+  index.html, about.html, projects.html, blog.html, contact.html
+- keep app.js linked at the bottom
+Do not change style.css or app.js yet.

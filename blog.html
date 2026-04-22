@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Educator building real products with AI and cloud tools." />
+  <meta property="og:title" content="Blog | Esther Bada" />
+  <meta property="og:description" content="Educator building real products with AI and cloud tools." />
+  <meta property="og:type" content="website" />
   <title>Blog | Esther Bada</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -43,12 +48,12 @@
               <span class="blog-tag">Building in Public</span>
             </div>
             <h3 class="card-title">
-              <a href="#blog-post-1">What I Didn't Expect From Building My First Real Website With AI</a>
+              <a href="#blog-post-1">No CS Degree. No Backend Experience. I Shipped a Live Website Anyway.</a>
             </h3>
             <p class="card-desc">
-              I didn't come into this trying to become a software developer. Here's what actually
-              happened when I built and deployed my first real project, the tools I used, the part
-              that broke me, and what shifted in how I think about building.
+              What actually happens when someone from an education background tries to build and deploy
+              a real website, the tools, the hard decisions, the 404 errors that nearly broke me,
+              and what changed on the other side of it.
             </p>
             <a href="#blog-post-1" class="blog-read-more">Read article &rarr;</a>
           </article>
@@ -68,100 +73,67 @@
               <time datetime="2026-04-03">April 3, 2026</time>
               <span class="blog-post-read-time">5 min read</span>
             </div>
-            <h2>What I Didn't Expect From Building My First Real Website With AI</h2>
+            <h2>No CS Degree. No Backend Experience. I Shipped a Live Website Anyway, Here's Exactly What That Looked Like.</h2>
             <div class="blog-post-intro">
-              <p>I didn't come into this trying to become a software developer.</p>
+              <p>The first time my deployed site returned a 404 error, I spent three hours convinced I had broken something fundamental. I hadn't. But I also couldn't immediately tell you why, and that gap was the most honest thing about where I actually was.</p>
               <p>
-                My background is in education, understanding how people learn, how systems fail them,
-                and how those gaps can be closed. So when I started building with AI tools, it wasn't
-                about "learning to code" in the traditional sense. It was about figuring out how to
-                actually build something real, from scratch, and get it live.
+                My background is in Early Childhood Education. I spent years studying how people learn,
+                where systems fail them, and what it takes to close those gaps. When I started building
+                with AI tools, it wasn't to become a developer, it was to find out whether someone
+                like me could build something real and actually get it live.
               </p>
               <p>
-                This project, my portfolio website, is the first time I've taken something from idea
-                to a working, deployed system.
+                This is what that process looked like, including the part that nearly stopped me.
               </p>
             </div>
           </div>
 
           <div class="blog-post-body">
 
-            <h3>The Stack I Used</h3>
-            <p>To get the site live, I used a simple but complete toolchain:</p>
+            <h3>The Tools I Used (and Why)</h3>
+            <p>To get the site live, I used five tools. Not because they were the most sophisticated options, but because they connected without requiring me to become a systems engineer before I could ship anything.</p>
             <ul>
               <li>Claude Code: for building, editing, and debugging directly inside my project</li>
-              <li>VS Code: as my development environment</li>
-              <li>Live Server: for real-time preview while building</li>
-              <li>GitHub:  for version control and tracking my work</li>
-              <li>Netlify:  for deployment and hosting</li>
-              <li>Netlify Forms: to handle contact form submissions without a backend</li>
+              <li>VS Code: my development environment</li>
+              <li>Live Server: real-time browser preview while building</li>
+              <li>GitHub: version control and progress tracking</li>
+              <li>Netlify: deployment, hosting, and form handling</li>
             </ul>
-            <p>None of these tools on their own are complex. What matters is how they connect.</p>
+            <p>The insight that changed how I approached everything: I wasn't choosing tools to learn. I was choosing tools to ship.</p>
 
-            <h3>Why I Chose These Tools</h3>
-            <p>
-              I chose Netlify because it removes the need for managing servers. I didn't need to think
-              about infrastructure, I just needed a way to get my site live quickly and reliably.
-            </p>
-            <p>
-              Instead of setting up a full database, I used Netlify Forms. It handles form submissions
-              automatically, which meant I didn't have to build a backend just to receive messages.
-            </p>
-            <p>
-              Claude Code became the most important tool in the process. It allowed me to describe
-              problems in plain language, see how they connected to my actual files, and fix issues
-              without getting stuck for hours.
-            </p>
+            <h3>The Decisions I Made Before I Started</h3>
+            <p>Netlify removed the need to manage servers. That was the entire reason I chose it — not the feature list, but the problems it made irrelevant.</p>
+            <p>Netlify Forms handled contact submissions automatically. No backend to build, no database to maintain, no reason to pause and learn a new system before my site was even live.</p>
+            <p>Claude Code was different from every other tool I used. It didn't just generate code — it helped me understand what my own files were actually doing. I could describe a problem in plain language and see how it connected to the real structure of my project.</p>
+            <p>Every tool I chose did one specific thing well. I didn't pick tools with the most features. I picked tools that reduced the number of decisions I had to make along the way.</p>
 
-            <h3>What It Cost Me</h3>
-            <p>One thing I paid attention to while building was cost.</p>
+            <h3>The Honest Cost Breakdown</h3>
+            <p>One thing I tracked carefully was cost, because I think accessibility matters. Here's what building and deploying this site actually cost me:</p>
             <ul>
               <li>VS Code: free</li>
               <li>Live Server: free</li>
-              <li>GitHub: free (for public repositories)</li>
+              <li>GitHub: free (public repositories)</li>
               <li>Netlify: free tier (hosting and forms)</li>
-              <li>Claude: paid plan (but optional depending on usage)</li>
+              <li>Claude:  paid plan (optional depending on usage)</li>
             </ul>
-            <p>
-              It's possible to build and deploy a working website with almost no upfront cost.
-              That changes how accessible building becomes.
-            </p>
+            <p>You can build and deploy a working website with almost no upfront cost. That changes who gets to build things — and that matters.</p>
 
-            <h3>The Hard Part: Deployment</h3>
-            <p>The most challenging part of this project wasn't writing code, it was deployment.</p>
-            <p>
-              I ran into repeated issues trying to connect my GitHub repository to Netlify. Even after
-              configuring everything correctly, the deployed site kept returning a 404 error. The manual
-              deployment worked, but the Git-integrated version didn't.
-            </p>
-            <p>
-              That experience taught me something important: building the site is only half the work.
-              Getting it live, and understanding how the system behaves in a real environment, is where
-              things become real.
-            </p>
+            <h3>The Part That Almost Stopped Me</h3>
+            <p>The hardest part of this project was not writing code. It was deployment.</p>
+            <p>I ran into repeated issues connecting my GitHub repository to Netlify. Even after configuring everything correctly, the deployed site kept returning 404 errors. The manual deployment worked fine. The Git-integrated version didn't. I went through every setting, read the documentation twice, and still couldn't get it to resolve the way it was supposed to.</p>
+            <p>What I eventually understood: the environment where your site lives does not behave the same way as the environment where you built it. That gap — between local and live — is where most problems actually hide.</p>
+            <p>Building the site was only half the work. Getting it into the world is where you find out what you actually understand.</p>
 
-            <h3>What Changed For Me</h3>
-            <p>
-              Before this, I saw coding as something that required years of learning before you could
-              build anything meaningful.
-            </p>
-            <p>Now, I see it differently.</p>
-            <p>
-              I can build real systems. I can deploy them. I can debug them. And I can do that without
-              coming from a traditional software engineering background.
-            </p>
-            <p>
-              What matters is not just knowing syntax — it's knowing how to think, how to structure
-              problems, and how to use the right tools effectively.
-            </p>
+            <h3>What Shifted When It Went Live</h3>
+            <p>Before this, I believed software development was a closed discipline, something that required years of formal preparation before you could produce anything meaningful.</p>
+            <p>That's not entirely wrong. But it's not the full picture either.</p>
+            <p>What I found is that the ability to ship depends less on how much syntax you've memorized and more on how well you can think through a problem, stay in the work when things get unclear, and choose the right tool at the right moment.</p>
+            <p>I can build real systems. I can deploy them. I can debug them when they break. And I did all of that without a traditional engineering background.</p>
 
-            <h3>Where This Goes Next</h3>
-            <p>This is just the beginning.</p>
-            <p>
-              I'm not trying to become a conventional developer. I'm exploring what it means to build
-              tools that sit at the intersection of education, technology, and human experience.
-            </p>
-            <p>And now, I know I can actually build them.</p>
+            <h3>What I'd Do Differently</h3>
+            <p>If I were starting over, I'd spend far less time trying to fully understand every tool before touching it, and far more time just building. The understanding came fastest when I was already inside a real problem, not standing outside it waiting to feel prepared.</p>
+            <p>I'm not trying to become a conventional developer. I'm building things that sit at the intersection of education, technology, and human experience. This site was proof that I can.</p>
+            <p>If you're waiting until you feel ready: that feeling doesn't arrive before you begin. It arrives somewhere in the middle, usually right after something breaks and you figure out how to fix it. <a href="contact.html">If you're working on something and want to talk it through, reach out — I'd genuinely like to hear about it.</a></p>
 
           </div>
         </div>
